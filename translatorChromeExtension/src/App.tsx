@@ -1,34 +1,49 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import logo from './assets/icon32.png'
+import icon1 from './assets/icon1.png'
+import icon2 from './assets/icon2.png'
+import icon3 from './assets/icon3.png'
+import icon4 from './assets/icon4.png'
+import microphone from './assets/microphoneIcon.png'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [text, setText] = useState('')
+  const [translatedText, setTranslatedText] = useState('')
+  const [isListening, setIsListening] = useState(false); // Add state for listening
+
+  const handleTranslate = () => {
+    // Add your translation logic here
+    setTranslatedText(`Translated: ${text}`)
+  }
+
+  const handleMicrophoneClick = () => {
+    setIsListening(!isListening);
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="translator-container">
+      <img src={logo} className="App-logo" alt="logo" />
+      <h1>My Translator</h1>
+      <textarea
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+        placeholder="Type or paste text here..."
+        className="translator-textarea"
+      />
+      <button onClick={handleTranslate} className="translator-button">
+        Translate
+      </button>
+      <button onClick={handleMicrophoneClick} className={`microphone-button ${isListening ? 'glowing' : ''}`}>
+        <img src={microphone} className="microphone-icon" alt="microphone" />
+        {isListening && <span className="listening-text">Listening...</span>}
+      </button>
+      {translatedText && <p className="translated-text">{translatedText}</p>}
+      <img src={icon1} className="floating-icon floating-icon1" alt="icon1" />
+      <img src={icon2} className="floating-icon floating-icon2" alt="icon2" />
+      <img src={icon3} className="floating-icon floating-icon3" alt="icon3" />
+      <img src={icon4} className="floating-icon floating-icon4" alt="icon4" />
+    </div>
   )
 }
 
