@@ -19,7 +19,9 @@ model = genai.GenerativeModel(
   system_instruction="You are a polyglot that can translate any language to a language specified by the user. Keep in mind slang terms, and only return the text that was translated with the most perceived accuracy. DO NOT EXPLAIN the translation at all,  just provide the translated text.",
 )
 app = Flask(__name__)
-CORS(app)
+
+# enable CORS for Chrome Extensions
+CORS(app, origins=["chrome-extension://*"])
 
 @app.route("/api/translate", methods=["POST"])
 def translate():

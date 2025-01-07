@@ -12,10 +12,35 @@ function App() {
   const [translatedText, setTranslatedText] = useState('')
   const [isListening, setIsListening] = useState(false); // Add state for listening
 
-  const handleTranslate = () => {
-    // Add your translation logic here
-    setTranslatedText(`Translated: ${text}`)
-  }
+  const handleTranslate = async () => {
+    if (!text.trim()) {
+      alert('Please enter text to translate.');
+      return;
+    }
+  
+    try {
+      const response = await fetch('http://127.0.0.1:5000/api/translate', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ input_text: text }),
+      });
+  
+      if (!response.ok) {
+        const errorData = await response.json();
+        alert(`Error: ${errorData.error}`);
+        return;
+      }
+  
+      const data = await response.json();
+      setTranslatedText(data.translation);
+    } catch (error) {
+      console.error('Error while translating:', error);
+      alert('Failed to connect to the translation API.');
+    }
+  };
+  
 
   const handleMicrophoneClick = () => {
     setIsListening(!isListening);
