@@ -7,20 +7,20 @@ This repository contains the source code for a Chrome extension designed to simp
 ### 1. **Copy-Paste Translation**
 Easily translate text by copying and pasting it into the extension. Perfect for quick and accurate translations.
 
-<img src="assetsReadMe/chinese.png" alt="Copy-Paste Translation Example" width="400">
-<img src="assetsReadMe/arabic.png" alt="Copy-Paste Translation Example" width="400">
-<img src="assetsReadMe/hebrew.png" alt="Copy-Paste Translation Example" width="400">
+<div style="display: flex; gap: 10px;">
+  <img src="assetsReadMe/chinese.png" alt="Copy-Paste Translation Example" width="300">
+  <img src="assetsReadMe/arabic.png" alt="Copy-Paste Translation Example" width="300">
+  <img src="assetsReadMe/hebrew.png" alt="Copy-Paste Translation Example" width="300">
+</div>
 
 ### 2. **Voice-to-Text Translation**
 Speak into your device, and the extension will convert your speech into text and translate it instantly. Ideal for hands-free usage and accessibility.
-
-<img src="assetsReadMe/screenshot3.png" alt="Voice-to-Text Translation Example" width="400">
 
 ## Installation
 
 1. Clone this repository to your local machine:
    ```bash
-   git clone https://github.com/Armani-Romay/Translator-ChromeExtension.git
+   git clone https://github.com/yourusername/translator-extension.git
    ```
 
 2. Open Chrome and navigate to `chrome://extensions/`.
