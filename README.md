@@ -8,9 +8,9 @@ This repository contains the source code for a Chrome extension designed to simp
 Easily translate text by copying and pasting it into the extension. Perfect for quick and accurate translations.
 
 <div style="display: flex; gap: 10px;">
-  <img src="assetsReadMe/chinese.png" alt="Copy-Paste Translation Example" width="300">
-  <img src="assetsReadMe/arabic.png" alt="Copy-Paste Translation Example" width="300">
-  <img src="assetsReadMe/hebrew.png" alt="Copy-Paste Translation Example" width="300">
+  <img src="assetsReadMe/chinese.png" alt="Copy-Paste Translation Example" width="200">
+  <img src="assetsReadMe/arabic.png" alt="Copy-Paste Translation Example" width="200">
+  <img src="assetsReadMe/hebrew.png" alt="Copy-Paste Translation Example" width="200">
 </div>
 
 ### 2. **Voice-to-Text Translation**
