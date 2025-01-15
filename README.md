@@ -20,7 +20,7 @@ Speak into your device, and the extension will convert your speech into text and
 
 1. Clone this repository to your local machine:
    ```bash
-   git clone https://github.com/yourusername/translator-extension.git
+   git clone https://github.com/Armani-Romay/Translator-ChromeExtension.git
    ```
 
 2. Open Chrome and navigate to `chrome://extensions/`.
