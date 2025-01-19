@@ -130,7 +130,7 @@
 
 @keyframes glow {
   from {
-    box-shadow: 0 0 5px #842f47;
+    box-shadow: 0 0 6px #842f47;
   }
   to {
     box-shadow: 0 0 20px #842f47;
